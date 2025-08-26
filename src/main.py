@@ -1,5 +1,5 @@
 def main():
-    print("Hello from python-template!")
+    print("Hello from python-basic-template!")
 
 
 if __name__ == "__main__":
