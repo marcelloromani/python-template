@@ -9,3 +9,7 @@ test-report-mac:
 .PHONY: test-report-win
 test-report-win:
 	start htmlcov/index.html
+
+.PHONY: test-gha
+test-gha:
+	uv run pytest --cov-report=term -r f -s
