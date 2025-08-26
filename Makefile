@@ -12,4 +12,4 @@ test-report-win:
 
 .PHONY: test-gha
 test-gha:
-	uv run pytest --cov-report=term -r f
+	uv run pytest --cov-report=term -r f -s
