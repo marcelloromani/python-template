@@ -15,9 +15,9 @@ jobs:
       - name: Test
         id: test
         run: |
-          echo "coverage<<EOF" >> $GITHUB_OUTPUT
+          echo "coverage<<EOF```" >> $GITHUB_OUTPUT
           make test-gha >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
+          echo "```EOF" >> $GITHUB_OUTPUT
 
       - uses: actions/github-script@v7
         env:
