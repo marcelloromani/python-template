@@ -23,7 +23,7 @@ jobs:
         env:
           INPUT_COVERAGE: ${{ steps.test.outputs.coverage }}
         with:
-          github-token: ${{secrets.GHA_PRS}}
+          github-token: ${{ secrets.GHA_PRS }}
           script: |
             github.rest.issues.createComment({
               issue_number: context.issue.number,
