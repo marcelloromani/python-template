@@ -14,7 +14,10 @@ jobs:
         uses: astral-sh/setup-uv@v5
       - name: Test
         id: test
-        run: echo "coverage=`make test-gha`" >> "$GITHUB_OUTPUT"
+        run: |
+          echo "coverage=<<EOF >> "$GITHUB_OUTPUT"
+          make test-gha >> "$GITHUB_OUTPUT"
+          echo "EOF" >> "$GITHUB_OUTPUT"
 
       - uses: actions/github-script@v7
         with:
